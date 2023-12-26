@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@app/datasource": [
+        "libs/datasource/src"
+      ],
+      "@app/datasource/*": [
+        "libs/datasource/src/*"
+      ],
+      "@app/common-config": [
+        "libs/common-config/src"
+      ],
+      "@app/common-config/*": [
+        "libs/common-config/src/*"
+      ]
+    }
+  }
+}
