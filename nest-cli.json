@@ -1,12 +1,18 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/nestjs-template/src",
+  "sourceRoot": "apps/api/src",
   "monorepo": true,
-  "root": "apps/nestjs-template",
+  "root": "apps/api",
   "$schema": "https://json.schemastore.org/nest-cli",
   "compilerOptions": {
+    "assets": [
+      {
+        "include": "../env/*",
+        "outDir": "./dist/"
+      }
+    ],
     "webpack": true,
-    "tsConfigPath": "apps/nestjs-template/tsconfig.json"
+    "tsConfigPath": "apps/api/tsconfig.app.json"
   },
   "projects": {
     "api": {

@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { getPgTypeOrmModule } from '../../../libs/datasource/getPgTypeOrmModule';
+import { databaseConfig } from '@app/datasource/config/DatabaseConfig';
 import { UserApiModule } from './user/UserApiModule';
 
 @Module({
-  imports: [getPgTypeOrmModule(), UserApiModule],
+  imports: [databaseConfig(), UserApiModule],
 })
 export class ApiAppModule {}
