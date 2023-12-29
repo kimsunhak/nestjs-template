@@ -4,7 +4,7 @@ import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { env } from '@app/datasource/config/env';
 
 export const databaseConfig = () => {
-  const entityPath = path.join(__dirname, 'src/domain/**/*.entity{.ts,js}');
+  const entityPath = path.join(__dirname, 'src/domain/**/*.entity.{.ts,js}');
   return TypeOrmModule.forRoot({
     type: env.database.type,
     host: env.database.host,
