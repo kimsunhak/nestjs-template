@@ -1,7 +1,11 @@
-## 회원가입
+### 회원가입
 POST http://localhost:3000/user/signup
 Content-Type: application/json
 
 {
   "userName": "shower"
 }
+
+
+### 사용자 조회
+GET http://localhost:3000/user/2812e219-a46d-4a8d-9955-ff184984fb12
