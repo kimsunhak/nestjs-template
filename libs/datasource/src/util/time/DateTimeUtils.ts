@@ -1,4 +1,10 @@
-import { convert, DateTimeFormatter, LocalDate, LocalDateTime } from 'js-joda';
+import {
+  convert,
+  DateTimeFormatter,
+  LocalDate,
+  LocalDateTime,
+  nativeJs,
+} from 'js-joda';
 
 /**
  * DateTimeUtils class
@@ -11,12 +17,23 @@ export class DateTimeUtils {
 
   /**
    * toDate
-   * @param localDate (LocalDate | LocalDateTime) 현재 날짜
+   * @param localDate LocalDate | LocalDateTime 현재 날짜
    */
   static toDate(localDate: LocalDate | LocalDateTime): Date {
     if (!localDate) {
       return null;
     }
     return convert(localDate).toDate();
+  }
+
+  /**
+   * toLocalDateTime
+   * @param date ([Date])
+   */
+  static toLocalDateTime(date: Date): LocalDateTime {
+    if (!date) {
+      return null;
+    }
+    return LocalDateTime.from(nativeJs(date));
   }
 }
